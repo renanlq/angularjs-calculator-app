@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1, 
+		"serial": "111", 
+		"nome": "Renan Lemes Queiroz", 
+		"telefone": "(61) 9999-6666", 
+		"nascimento": "10/05/1989", 
+		"data": "01/01/2016", 
+		"operadora": 
+		{
+			"codigo": 15, 
+			"nome": "Vivo", 
+			"categoria": "Celular", 
+			"cor": "orange", 
+			"preco": 2
+		}
+	},
+	{
+		"id": 2, 
+		"serial": "222", 
+		"nome": "Pedro de Queiroz Filho",
+		"telefone": "(61) 3333-2222", 
+		"nascimento": "11/03/1934", 
+		"data": "01/01/2016", 
+		"operadora": 
+		{
+			"codigo": 41, 
+			"nome": "Tim", 
+			"categoria": "Celular", 
+			"cor": "green", 
+			"preco": 3
+		}
+	},
+	{
+		"id": 3, 
+		"serial": "333", 
+		"nome": "Claudio Alves Queiroz", 
+		"telefone": "(61) 98888-2222", 
+		"nascimento": "29/11/1971", 
+		"data": "01/01/2016", 
+		"operadora": 
+		{
+			"codigo": 25, 
+			"nome": "GVT", 
+			"categoria": "Fixa", 
+			"cor": "grey", 
+			"preco": 2
+		}
+	}
+]

@@ -1,0 +1,35 @@
+<div class="jumbotron" scope="{{$id}}">
+	<h3>{{titulo}}</h3>
+	<br />
+	<!--p class="bg-danger" ng-show="message.msg.length > 0" ng-style="{'color': message.color}">{{message.msg}}</p-->
+	<div ui-Alert title="Aconteceu um erro." message="message.msg" scope="{{$id}}" ng-show="message.msg.length >= 0">
+		Não foi possível carregar os dados.</div>
+	<input type="text" class="form-control" ng-model="criterioDeBusca" placeholder="O que você está buscando?" />
+	<table ng-show="contatos.length > 0" class="table table-striped">
+		<tr>
+			<th></th>
+			<th>Serial</th>
+			<th><a href="" ng-click="ordernarPor('nome');">Nome</a></th>
+			<th><a href="" ng-click="ordernarPor('telefone');">Telefone</a></th>
+			<th>Nascimento</th>
+			<th>Operadora</th>
+			<th>Preço</th>
+			<th>Cadastro</th>
+		</tr>
+		<tr ng-class="{clSelecionado: contato.selecionado}" ng-repeat="contato in contatos | filter:criterioDeBusca | orderBy: criterioDaOrdenacao:direcaoDaOrdenacao">
+			<td><input type="checkbox" ng-model="contato.selecionado" /></td>
+			<td>{{contato.serial}}</td>
+			<td title="{{contato.nome}}"><a href="#/detalhes/{{contato.id}}">{{contato.nome | name | ellipsis}}</a></td>
+			<td>{{contato.telefone}}</td>
+			<td>{{contato.nascimento}}</td>
+			<td ng-style="{'color': contato.operadora.cor}">{{contato.operadora.nome}}</td>
+			<td>{{contato.operadora.preco | currency}}</td>
+			<td>{{contato.data | date:'dd/MM/yyyy HH:mm'}}</td>
+		</tr>
+		<!--tr ng-repeat="contato in contatos"><td ng-repeat="(key,value) in contato">{{value}}</td></tr-->
+	</table>
+	<hr />
+	<a href="#/novo" class="btn btn-primary btn-block" ng-hide="isContatoSelecionado(contatos);">Novo contato</a>
+	<input type="button" class="btn btn-danger btn-block" ng-click="apagarContatos(contatos);" 
+		ng-show="isContatoSelecionado(contatos);" value="Apagar" />
+</div>
