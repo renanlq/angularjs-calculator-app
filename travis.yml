@@ -1,0 +1,9 @@
+language: Javascript
+
+sudo: required
+
+deploy:
+  provider: heroku
+  api-key:
+    secure: $heroku-api-key
+  app: poc-angularjs-app
