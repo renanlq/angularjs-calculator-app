@@ -1,6 +1,4 @@
-language: Javascript
-
-sudo: required
+language: node_js
 
 deploy:
   provider: heroku
