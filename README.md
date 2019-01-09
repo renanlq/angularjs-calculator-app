@@ -1,4 +1,4 @@
 # Agenda in Angular JS (pt-br)
 
 # Travis CI
-https://travis-ci.org/renanlq/angularjs-app.svg?branch=master
+[![Build Status](https://travis-ci.org/renanlq/angularpwa-app.svg?branch=master)](https://travis-ci.org/renanlq/angularpwa-app)
